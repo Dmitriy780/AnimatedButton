@@ -37,7 +37,7 @@ const CustomButton: React.FC<ButtonProps> = ({ title, style }) => {
     const Effect1_In = () => {
         Animated.timing(opacity1, {
             toValue: 0,
-            duration: 500,
+            duration: 600,
             useNativeDriver: true,
         }).start()
     }
@@ -45,7 +45,7 @@ const CustomButton: React.FC<ButtonProps> = ({ title, style }) => {
     const Effect2_In = () => {
         Animated.timing(opacity2, {
             toValue: 1,
-            duration: 500,
+            duration: 600,
             useNativeDriver: true,
         }).start()
     }
@@ -53,7 +53,7 @@ const CustomButton: React.FC<ButtonProps> = ({ title, style }) => {
     const Effect2_Out = () => {
         Animated.timing(opacity2, {
             toValue: 0,
-            duration: 500,
+            duration: 600,
             useNativeDriver: true,
         }).start()
     }
@@ -61,7 +61,7 @@ const CustomButton: React.FC<ButtonProps> = ({ title, style }) => {
     const Effect3_In = () => {
         Animated.timing(opacity3, {
             toValue: 1,
-            duration: 500,
+            duration: 600,
             useNativeDriver: true,
         }).start()
     }
@@ -73,7 +73,7 @@ const CustomButton: React.FC<ButtonProps> = ({ title, style }) => {
         setTimeout(() => {
             Effect2_Out();
             Effect3_In();
-        }, 1000);
+        }, 1300);
     }
 
     return (
