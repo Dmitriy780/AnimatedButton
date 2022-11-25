@@ -93,7 +93,7 @@ const CustomButton: React.FC<ButtonProps> = ({ title, style }) => {
                         style={styles.container}
                         start={{ x: 0.3, y: 1.0 }} end={{ x: 0.8, y: 0 }}
                     >
-                        <Text style={{ color: 'white' }}>
+                        <Text style={styles.caption}>
                             {title}
                         </Text>
                     </LinearGradient>
@@ -127,7 +127,7 @@ const CustomButton: React.FC<ButtonProps> = ({ title, style }) => {
                     }
                 ]}
             >
-                <Text style={{ color: '#333333' }}>
+                <Text style={styles.textJoined}>
                     Joined
                 </Text>
             </Animated.View>
@@ -150,7 +150,15 @@ const styles = StyleSheet.create({
         height: 15,
         resizeMode: 'contain',
         tintColor: 'white',
-    }
+    },
+    caption: {
+        fontFamily: 'Montserrat-SemiBold',
+        color: 'white'
+    },
+    textJoined: {
+        fontFamily: 'Montserrat-SemiBold',
+        color: '#473F4E'
+    },
 });
 
 export default CustomButton;
