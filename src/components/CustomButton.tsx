@@ -34,10 +34,10 @@ const CustomButton: React.FC<ButtonProps> = ({ title, style }) => {
     const opacity2 = useState(new Animated.Value(0))[0];
     const opacity3 = useState(new Animated.Value(0))[0];
 
-    const Effect1_In = () => {
+    const Effect1_Out = () => {
         Animated.timing(opacity1, {
             toValue: 0,
-            duration: 600,
+            duration: 500,
             useNativeDriver: true,
         }).start()
     }
@@ -45,7 +45,7 @@ const CustomButton: React.FC<ButtonProps> = ({ title, style }) => {
     const Effect2_In = () => {
         Animated.timing(opacity2, {
             toValue: 1,
-            duration: 600,
+            duration: 300,
             useNativeDriver: true,
         }).start()
     }
@@ -53,7 +53,7 @@ const CustomButton: React.FC<ButtonProps> = ({ title, style }) => {
     const Effect2_Out = () => {
         Animated.timing(opacity2, {
             toValue: 0,
-            duration: 600,
+            duration: 500,
             useNativeDriver: true,
         }).start()
     }
@@ -61,19 +61,19 @@ const CustomButton: React.FC<ButtonProps> = ({ title, style }) => {
     const Effect3_In = () => {
         Animated.timing(opacity3, {
             toValue: 1,
-            duration: 600,
+            duration: 300,
             useNativeDriver: true,
         }).start()
     }
 
     const onPressMe = () => {
         setDisabled(true);
-        Effect1_In();
+        Effect1_Out();
         Effect2_In();
         setTimeout(() => {
             Effect2_Out();
             Effect3_In();
-        }, 1300);
+        }, 1200);
     }
 
     return (
